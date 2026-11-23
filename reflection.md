@@ -4,9 +4,9 @@ All file, line and commit references are to the expense-tracker repo: https://gi
 
 ## 1. Fresh session
 
-In the Expense Tracker project, the fresh Claude Code session for Round 3 edited the app files (`index.html`, `app.js`, `expenses.js`) while a slow test-first browser test run was still going. Because the test server reads the app files on every request, tests ran against half-finished code and failed for the wrong reasons. This happened because `handoff-round-2.md` (in commit `e84d68d`) warned that failing browser tests are slow (each one waits 30 seconds), but never said not to change the files during a run, and `CLAUDE.md` had no notes on the test setup at all. I could have prevented this by adding a rule to `CLAUDE.md`, which every session reads first, saying not to edit the app files while browser tests are running. I added that rule at the end of Round 3, and in Round 4 I expanded it with how long a test-first run takes and a safe way to work while it runs.
+In the Expense Tracker project, the fresh Claude Code session for Round 2 had to stop and ask me about the decision records before it could start. Round 1 had named them `001` and `002`, but my Round 2 prompt asked for four-digit numbers (`0001`, `0002`), so the session didn't know whether to rename the old files or keep the old style. It also found that the Round 1 records were not written as Y-statements, which the new rounds required. This happened because Round 1 had no handoff file, and `CLAUDE.md` said nothing about how decision records should be named or written, so the Round 1 choices were never written down as rules. I could have prevented this by adding the naming rule and the Y-statement format to `CLAUDE.md` in Round 1. I added both at the end of Round 2, so later sessions followed them without asking.
 
-Reference: commit `2cc2bc6` (first added the rule to `CLAUDE.md`), commit `e704ca1` (expanded it), `CLAUDE.md` line 34.
+Reference: commit `033d45c` (renamed the records after the session asked), commit `e84d68d` (added the rules to `CLAUDE.md`), `CLAUDE.md` lines 58–59.
 
 ## 2. Changed requirement
 
