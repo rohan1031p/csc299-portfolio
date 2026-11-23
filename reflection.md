@@ -44,7 +44,7 @@ test("Layout (browser): on a phone-sized screen each expense is a card with labe
 
 This test was useful because it caught a real bug on phone-sized screens. In the old version of the app, the Delete button sat just off the right edge of a 375px screen (x = 376.6), so a phone user couldn't reach it without scrolling the table sideways. My earlier layout test, "the page does not scroll sideways," still passed on that version because the table scrolled inside its own box. This test checks where the Edit and Delete buttons actually appear, so it fails on the old code and passes after the fix. It also checks that the labels show and that Delete still works on the card layout.
 
-Reference: `tests/browser.test.js` line 834 (added in commit `5aa6981`).
+Reference: `tests/browser.test.js` line 1088 (added in commit `5aa6981`).
 
 ## 4. A commit I would change
 
